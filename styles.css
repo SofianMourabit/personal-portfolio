@@ -22,10 +22,17 @@ h2 {
 
 a {
   text-decoration: none;
-  color: #999;
+  color: #7f8c8d;
 }
 a:hover {
   color: #6633ff;
+}
+
+/* Paragraph Styles */
+
+p {
+    color: #7f8c8d;
+    word-spacing: 0.05em;
 }
 
 /* Section Styles */
@@ -37,6 +44,7 @@ a:hover {
   padding: 10px;
   position: fixed;
   text-align: center;
+  z-index: 1000;
 }
 .nav {
   display: flex;
@@ -50,6 +58,8 @@ a:hover {
 .nav .name {
     display: block;
     margin-right: auto;
+}
+.nav .name a{
     color: white;
 }
 .nav li {
@@ -59,7 +69,8 @@ a:hover {
   transition: all .5s;
 }
 .nav a:hover {
-  color: white
+  color: white;
+  border-bottom: 3px solid #42b983;
 }
 
 header {
@@ -72,27 +83,52 @@ header {
 header {
   line-height: 1.5;
 }
+
+img.profile-image{
+  filter: grayscale(100%);
+}
+
 header .profile-image {
   margin-top: 50px;
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  border: 3px solid white;
-  transition: all .5s;
+  border: 3px solid #fff;
+  position: relative;
 }
 header .profile-image:hover {
-  transform: scale(1.2) rotate(5deg);
+  -webkit-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  -webkit-animation: swinging &1 ease-in-out forwards;
+  animation: swinging 1s ease-in-out forwards;
+  filter: grayscale(0%);
+}
+@-webkit-keyframes swinging{
+    0%{-webkit-transform: scale(1.1) rotate(10deg);border-color: #42b983;}
+    50%{-webkit-transform: scale(1.2) rotate(-5deg);border-color: #34495e;}
+    75%{-webkit-transform: scale(1.1) rotate(10deg);border-color: #34495e;}
+    100%{border-color: #42b983;}
+}
+
+@keyframes swinging{
+    0%{transform: scale(1.1) rotate(10deg);border-color: #42b983;}
+    50%{transform: scale(1.2) rotate(-5deg);border-color: #34495e;}
+    75%{-webkit-transform: scale(1.1) rotate(10deg);border-color: #34495e;}
+    100%{border-color: #42b983;}
 }
 .tag {
-  background-color: #efefef;
-  color: black;
-  padding: 10px;
-  border-radius: 5px;
   display: table;
   margin: 10px auto;
+  padding: 0.4em 1em;
+  border-radius: 2em;
+  color: #34495e;
+  background-color: #fff;
+  transition: all 0.15s ease;
+  box-sizing: border-box;
+  border: 1px solid #34495e;
 }
 .location {
-  background-color: #222;
+  background-color: #34495e;
   color: #fff;
 }
 .card {
