@@ -156,6 +156,46 @@ main.flex {
     display: flex;
     flex-flow: column;
 }
+h1 {
+    color: #2c3e50;
+    text-align: center;
+}
+button{
+    background-color: #2c3e50;
+    border-radius: 2em;
+    color: white;
+    border-style: none;
+    padding: 15px;
+    float: right;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+button:hover{
+    cursor: pointer;
+}
+input[type="text"], input[type="email"], textarea {
+    padding: 11px;
+    width: 100%;
+    border: 2px solid #2c3e50;
+    border-radius: 2em;
+    margin-bottom: 1.2em;
+}
+::-webkit-input-placeholder {
+  font-weight: bold;
+  color: #7f8c8d;
+}
+ul.contact-details > li {
+    padding-top: 1.2em;
+}
+ul.contact-details > li > i.fa {
+    padding-right: 20px;
+    vertical-align: middle;
+}
+ul.contact-details {
+    list-style: none;
+    padding: 0;
+    color: #2c3e50;
+}
 ul.polaroids {
     list-style: none;
     padding: 0;
@@ -266,9 +306,18 @@ ul.skills {
   padding: 5px 10px;
   margin: 2px;
 }
-
 .skills li:nth-child(odd) {
   background: #2c3e50;
+}
+hr{
+  border: 1px solid #2c3e50;
+}
+ul.social {
+    padding: 0;
+}
+.social li {
+  display: inline-block;
+  margin: 2px;
 }
 ul.hobbies {
   padding: 0;
@@ -314,7 +363,6 @@ footer ul li {
 a.social {
   display: inline-block;
   text-indent: -9999px;
-  margin-left: 5px;
   width: 30px;
   height: 30px;
   background-size: 30px 30px;
@@ -335,6 +383,9 @@ a.social:hover {
 }
 .clearfix {
   clear: both;
+}
+.top {
+  padding-top: 60px;
 }
 
 
