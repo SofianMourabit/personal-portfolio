@@ -162,7 +162,24 @@ ul.skills {
 .skills li:nth-child(odd) {
   background: #2c3e50;
 }
+ul.hobbies {
+  padding: 0;
+  text-align: center;
+}
 
+.hobbies li {
+  border-radius: 2em;
+  border: 2px solid #42b983;
+  display: block;
+  background: transparant;
+  color: #7f8c8d;
+  padding: 5px 10px;
+  margin: 10px;
+}
+
+.hobbies li:nth-child(odd) {
+  border-color: #2c3e50;
+}
 footer {
   width: 100%;
   min-height: 30px;
@@ -212,7 +229,7 @@ a.social:hover {
 }
 
 /* Styles for larger screens */
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 980px) {
 
   .flex {
       display: -ms-flexbox;      /* TWEENER - IE 10 */
